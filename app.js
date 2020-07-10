@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
   res.header("x-frame-options", "ALLOW-FROM http://10.0.2.3")
 
   // res.setHeader("content-security-policy", "frame-ancestors 'self'")
-  // res.setHeader("content-security-policy", "frame-ancestors 'self' http://10.0.2.2:5000")
+  res.setHeader("content-security-policy", "frame-ancestors 'self' http://10.0.2.2:5000")
   next();
 })
 
